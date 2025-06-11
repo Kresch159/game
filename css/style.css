@@ -246,6 +246,10 @@ button {
 .game-box__name-text_3string {
   width: 300px;
 }
+.game-box:hover {
+  transform: scale(1.085);
+  transition: transform 0.5s;
+}
 
 .container {
   display: flex;
