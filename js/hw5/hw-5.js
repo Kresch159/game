@@ -1,9 +1,9 @@
 /*задание 1*/
 function little(a,b) {
     if (a<b) {
-    console.log(`${a} меньше`);
+    return console.log(`${a} меньше`);
     } else {
-    console.log(`${b} меньше`);
+    return console.log(`${b} меньше`);
     }
 }
 
@@ -11,14 +11,14 @@ little(13,12);
 
 /*задание 2*/
 function evenNumber(n) {
-    return n%2==0;
+if (n%2==0) {
+    return console.log('Число четное');
+} else {
+    return console.log('Число нечетное');
+}
 }
 
-if (evenNumber(16)) {
-    console.log('Число четное');
-} else {
-    console.log('Число нечетное');
-}
+evenNumber(16);
 
 /*задание 3*/
 function sqrNumber(num) {
@@ -51,9 +51,9 @@ function checkNum() {
     let a = Number(prompt('Введите первое число'));
     let b = Number(prompt('Введите второе число'))
     if (typeof a === 'number' && !isNaN(a) && typeof b === 'number' && !isNaN(b)) {
-        console.log(`Произведение чисел ${a*b}`);
+        return console.log(`Произведение чисел ${a*b}`);
     } else {
-        console.log('Одно или оба значения не являются числом')
+        return console.log('Одно или оба значения не являются числом')
     }
 }
 checkNum();
@@ -62,9 +62,9 @@ checkNum();
 function checkKub() {
     let n = Number(prompt('Введите число'));
     if (isNaN(n)) {
-        console.log('Переданный параметр не является числом');
+        return console.log('Переданный параметр не является числом');
     } else {
-        console.log(`${n} в кубе равняется ${n**3}`);
+        return console.log(`${n} в кубе равняется ${n**3}`);
     }
 }
 checkKub();
