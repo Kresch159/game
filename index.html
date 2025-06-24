@@ -99,23 +99,23 @@
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Угадай число</h3>
                     <p class="container-box__content-text">Попробуй угадать случайное число&nbsp;от&nbsp;1&nbsp;до 100.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button" onclick="guessTheNumber();">Играть!</button>
                 </div>
-                <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_AD61FF" src="./img/1.svg" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="guessTheNumber();"><img class="container-box__img game-box__img_AD61FF" src="./img/1.svg" alt="Картинка"></a>
             </div>
             <div id="simple_arithmetic" class="container-box">
-                <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_FDAD00" src="./img/2.svg" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="arithmeticSimple();"><img class="container-box__img game-box__img_FDAD00" src="./img/2.svg" alt="Картинка"></a>
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Простая арифметика</h3>
                     <p class="container-box__content-text">Попробуй решить простые арифметические задачи.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button" onclick="arithmeticSimple();">Играть!</button>
                 </div>
             </div>
             <div id="turn_text_over" class="container-box">
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Переверни текст</h3>
                     <p class="container-box__content-text">Попробуй ввести текст, который будет&nbsp;перевернут.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button">Играть!</button>
                 </div>
                 <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_565EEF" src="./img/3.svg" alt="Картинка"></a>
             </div>            
@@ -124,14 +124,14 @@
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel game-box__name-text_3string">Камень, ножницы, бумага</h3>
                     <p class="container-box__content-text">Сыграй в популярную игру против&nbsp;компьютера.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button">Играть!</button>
                 </div>                
             </div>
             <div id="simple_quiz" class="container-box">                
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Простая викторина</h3>
                     <p class="container-box__content-text">Отвечай на вопросы викторины с&nbsp;вариантами ответов.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button">Играть!</button>
                 </div>
                 <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_271A58" src="./img/4.svg" alt="Картинка"></a>
             </div>
@@ -140,7 +140,7 @@
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel game-box__name-text_3string">Генератор случайных цветов</h3>
                     <p class="container-box__content-text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <a href="#"><button class="container-box__content-button">Играть!</button></a>
+                    <button class="container-box__content-button">Играть!</button>
                 </div>
             </div>
         </div>
@@ -149,5 +149,11 @@
     <footer class="footer">
         <h2 class="footer__titel">Все права защищены.</h2>
     </footer>
+
+
+<!--скрипты-->
+    <script defer src="./js/guess_the_number.js"></script>
+    <script defer src="./js/arithmetic_simple.js"></script>
+    
 </body>
 </html>
