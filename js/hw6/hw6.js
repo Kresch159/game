@@ -10,11 +10,13 @@ for (let i=0; i<mission1.length; i++) {
 
 //Задание2
 const mission2=[1, 5, 4, 10, 0, 3];
-mission2.forEach((el, index) => {
+/*mission2.forEach((el, index) => {
     if (el==4) {
         console.log(`${index}: ${el}`);
     }   
-});
+});*/
+const numFilter=mission2.findIndex(item=>item===4);
+console.log(numFilter);
 
 //Задание3
 const mission3=[1, 3, 5, 10, 20];
@@ -58,9 +60,7 @@ if (mission7.includes(userNum7)) {
 
 //Задание8
 let b='abcdef';
-b=b.split('');
-b.reverse();
-b=b.join('');
+b=b.split('').reverse().join('');
 console.log(b);
 
 //Задание9
