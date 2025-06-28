@@ -115,25 +115,25 @@
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Переверни текст</h3>
                     <p class="container-box__content-text">Попробуй ввести текст, который будет&nbsp;перевернут.</p>
-                    <button class="container-box__content-button">Играть!</button>
+                    <button class="container-box__content-button" onclick="turnTheTextOver()">Играть!</button>
                 </div>
-                <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_565EEF" src="./img/3.svg" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="turnTheTextOver()"><img class="container-box__img game-box__img_565EEF" src="./img/3.svg" alt="Картинка"></a>
             </div>            
             <div id="rock_scissors_paper" class="container-box">
-                <a class="container-box__link-img" href="№"><img class="container-box__img game-box__img_99D100" src="./img/5.png" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="rockScissorsPaper()"><img class="container-box__img game-box__img_99D100" src="./img/5.png" alt="Картинка"></a>
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel game-box__name-text_3string">Камень, ножницы, бумага</h3>
                     <p class="container-box__content-text">Сыграй в популярную игру против&nbsp;компьютера.</p>
-                    <button class="container-box__content-button">Играть!</button>
+                    <button class="container-box__content-button" onclick="rockScissorsPaper()">Играть!</button>
                 </div>                
             </div>
             <div id="simple_quiz" class="container-box">                
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel">Простая викторина</h3>
                     <p class="container-box__content-text">Отвечай на вопросы викторины с&nbsp;вариантами ответов.</p>
-                    <button class="container-box__content-button">Играть!</button>
+                    <button class="container-box__content-button" onclick="simpleQuiz()">Играть!</button>
                 </div>
-                <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_271A58" src="./img/4.svg" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="simpleQuiz()"><img class="container-box__img game-box__img_271A58" src="./img/4.svg" alt="Картинка"></a>
             </div>
             <div id="random_color_generator" class="container-box">
                 <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_271A58" src="./img/6.svg" alt="Картинка"></a>
@@ -154,6 +154,9 @@
 <!--скрипты-->
     <script defer src="./js/guess_the_number.js"></script>
     <script defer src="./js/arithmetic_simple.js"></script>
+    <script defer src="./js/turn_the_text_over.js"></script>
+    <script defer src="./js/Rock_scissors_paper.js"></script>
+    <script defer src="./js/simple_quiz.js"></script>
     
 </body>
 </html>

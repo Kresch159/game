@@ -9,28 +9,32 @@ function arithmeticSimple() {
     let b=getRandomInt(1, 20);
     let c=getRandomInt(1, 20);
     let d=getRandomInt(1, 20);
-    let e=getRandomInt(1, 20);
-    let f=getRandomInt(1, 20);
-    let g=getRandomInt(1, 20);
-    let div=getRandomInt(1, 20);
+    let e=getRandomInt(1, 10);
+    let f=getRandomInt(1, 10);
+    let g=getRandomInt(1, 10);
+    let div=getRandomInt(1, 10);
     let summ=a+b;
     let diff=c-d;
     let mult=e*f;
     let h=g*div;
         
     let userSumm = Number(prompt(`${a} + ${b} =`));
+    if (userSumm===0) return;
     let userDiff = Number(prompt(`${c} - ${d} =`));
+    if (userDiff===0) return;
     let userMult = Number(prompt(`${e} * ${f} =`));
-    let userH = Number(prompt(`${h} / ${g} =`));
+    if (userMult===0) return;
+    let userDiv = Number(prompt(`${h} / ${g} =`));
+    if (userDiv===0) return;
 
     alert(`${a} + ${b} = ${summ} ваш ответ ${userSumm}
 ${c} - ${d} = ${diff} ваш ответ ${userDiff}
 ${e} * ${f} = ${mult} ваш ответ ${userMult}
-${h} / ${g} = ${div}  ваш ответ ${userH}`);
+${h} / ${g} = ${div}  ваш ответ ${userDiv}`);
 
-    if (summ==userSumm && diff==userDiff && mult==userMult && div==userH) {
-        alert('все верно!!!')
+    if (summ==userSumm && diff==userDiff && mult==userMult && div==userDiv) {
+        alert('Все верно!!!')
     } else {
-        alert('есть ошибка')
+        alert('Есть ошибка')
     }
 }
