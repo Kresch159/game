@@ -6,9 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./img/icon.svg" type="image/x-icon">
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">    
     <title>GamesClub</title>
+    
 </head>
 <body>
     <section class="top">
@@ -136,11 +137,11 @@
                 <a class="container-box__link-img" href="#" onclick="simpleQuiz()"><img class="container-box__img game-box__img_271A58" src="./img/4.svg" alt="Картинка"></a>
             </div>
             <div id="random_color_generator" class="container-box">
-                <a class="container-box__link-img" href="#"><img class="container-box__img game-box__img_271A58" src="./img/6.svg" alt="Картинка"></a>
+                <a class="container-box__link-img" href="#" onclick="randomColorGenerator()"><img class="container-box__img game-box__img_271A58" src="./img/6.svg" alt="Картинка"></a>
                 <div class="container-box__content">
                     <h3 class="container-box__content-titel game-box__name-text_3string">Генератор случайных цветов</h3>
                     <p class="container-box__content-text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                    <button class="container-box__content-button">Играть!</button>
+                    <button class="container-box__content-button" onclick="randomColorGenerator()">Играть!</button>
                 </div>
             </div>
         </div>
@@ -155,8 +156,8 @@
     <script defer src="./js/guess_the_number.js"></script>
     <script defer src="./js/arithmetic_simple.js"></script>
     <script defer src="./js/turn_the_text_over.js"></script>
-    <script defer src="./js/Rock_scissors_paper.js"></script>
+    <script defer src="./js/rock_scissors_paper.js"></script>
     <script defer src="./js/simple_quiz.js"></script>
-    
+    <script defer src="./js/random_color_generator.js"></script>
 </body>
 </html>
