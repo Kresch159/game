@@ -5,107 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tests</title>
     <style>
-        
+        .txt {
+            text-decoration: underline;
+            
+        }
     </style>
 </head>
 <body>
-    <h1 class="titel_q1">Задание 1. Скрытие и показ текста</h1>
-    <button class="btn__titel_q1">Скрыть</button>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil beatae perspiciatis officia eaque quo dolorum voluptatibus molestias ut in dolores atque dolorem, tempora laudantium alias, iusto explicabo rem? Quo.</p>
+    <button class="btn">Klik</button>
 
-    <h2>Задание 2. Изменение стиля элемента</h2>
-    <p class="text_q2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure pariatur nobis et, ratione eligendi vel! Earum ullam, quia, harum minus quasi blanditiis repellat ad facere unde alias sunt rerum odit.</p>
-    <button class="btn_q2">Изменить цвет</button>
-
-    <h2 class="titel_q3">Задание 3. Динамическое изменение текста</h2>
-    <button class="btn_q3">Изменить текст</button>
-
-    <h2 class="description">Задание 4. Поиск и изменение элементов по классу</h2>
-    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, assumenda.</p>
-    <p class="description">Lorem ipsum dolor sit amet.</p>
-    <button class="btn_q4 description">Новый текст</button>
-
-    <h2>Задание 5. Работа с querySelectorAll</h2>
-    <p class="text_q5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui totam mollitia officia delectus excepturi atque fugit, molestiae exercitationem, veniam nemo corporis dolores, magnam aut recusandae dolor facere. Mollitia, dolorem.</p>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum soluta sunt saepe maxime eaque eveniet eum quos, fugit perspiciatis maiores est harum adipisci nisi, tenetur repudiandae ut voluptate voluptatibus?</p>
-    <button class="btn_q5">Измененный текст</button>
-
-    <h2>Задание 6. Добавление нового элемента в DOM</h2>
-    <button class="btn_q6">Добавить элемент</button>
-
-    <h2>Задание 7. Удаление элемента</h2>
-    <button class="btn_q7">Удалить элемент</button>
-
+    <div class="content"></div>
     <script>
-        const titel_q1El=document.querySelector('.titel_q1');
-        const btn__titel_q1El=document.querySelector('.btn__titel_q1');
+        const textEl=document.querySelector('.text');
+        const btnEl=document.querySelector('.btn');
+        const contentEl=document.querySelector('.content');
 
-        btn__titel_q1El.addEventListener('click', ()=>{
-            if (titel_q1El.style.display !== 'none') {
-                titel_q1El.style.display = 'none';
-                btn__titel_q1El.textContent = 'Показать';
-            } else {
-                titel_q1El.style.display = '';
-                btn__titel_q1El.textContent = 'Скрыть';
-            }
+        btnEl.addEventListener('click', ()=>{
             //textEl.textContent='новый текст'
             //textEl.style.color='red';
             //textEl.style.backgroundColor='green';
             //textEl.classList.add('txt');
-            //textEl.style.fontSize='50px';            
-        });
-
-        const text_q2El=document.querySelector('.text_q2');
-        const btn_q2El=document.querySelector('.btn_q2');
-
-        function getRandomColor() {
-            return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
-        }
-
-        btn_q2El.addEventListener('click', ()=>{           
-                text_q2El.style.color = getRandomColor();          
-        });
-
-        const titel_q3El=document.querySelector('.titel_q3');
-        const btn_q3El=document.querySelector('.btn_q3');
-
-        btn_q3El.addEventListener('click', ()=>{           
-            titel_q3El.textContent='Привет, мир!';          
-        });
-
-        const btn_q4El=document.querySelector('.btn_q4');
-
-        btn_q4El.addEventListener('click', ()=>{           
-            const elements = document.querySelectorAll('.description');
-            elements.forEach(function(el) {
-                el.textContent = 'Измененный текст';
-            });         
-        });
-
-        const btn_q5El=document.querySelector('.btn_q5');
-
-        btn_q5El.addEventListener('click', ()=>{           
-            const elements = document.querySelectorAll('.description');
-            elements.forEach(function(el) {
-                el.textContent = 'Новый текст';
-            });         
-        });
-        
-        const btn_q6El = document.querySelector('.btn_q6');
-
-        btn_q6El.addEventListener('click', ()=>{
-            const newParagraph = document.createElement('p');
-            newParagraph.textContent = 'Новый абзац. Задание 6';
-            document.body.appendChild(newParagraph);
-        });
-
-        const btn_q7El = document.querySelector('.btn_q7');
-
-        btn_q7El.addEventListener('click', ()=>{
-            const elements = document.querySelector('.description');
-            elements.remove();
+            //textEl.style.fontSize='50px';
+            contentEl.innerHTML=`
+                                    <h2>Lorem, ipsum.</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                `;
         })
-
-                    
     </script>
 
 </body>

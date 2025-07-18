@@ -7,11 +7,13 @@ a {text-decoration: none;}
 
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
   }
   
 body{
     font-family: "Montserrat", sans-serif;
     background-color: #202027;
+    transition: background 0.4s;
 }
 
 button {
@@ -26,7 +28,7 @@ button {
 
 .top {
     position: relative;
-    height: 800px;
+    height: 710px;
     background-color: #E1FF8F;
     &__big-star {
         position: absolute;
@@ -105,6 +107,22 @@ button {
     }
 }
 
+.slider{
+    background: #BCEC30;
+    height: 90px;
+    &-track{
+        display: flex;
+        width: max-content;
+        animation: scroll-left 20s linear infinite;
+        &__link{
+            font-weight: 700;
+            font-size: 30px;
+            color: #202027;
+            padding: 28px 51px;
+        }
+    }
+}
+
 .section-desktop {
     position: relative;
     margin-top: 94px;    
@@ -118,6 +136,7 @@ button {
         max-width: 788px;
         font-weight: 400;
         font-size: 24px;
+        line-height: 32px;
         color: #FFFFFF;
         margin: 24px 0 72px;
     }
@@ -211,7 +230,7 @@ button {
         }
     }
     &__name {
-        padding: 32px 32px 36px;
+        padding: 28px 32px 36px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -245,6 +264,7 @@ button {
         transform: scale(1.085);
         transition: transform 0.5s;
     }
+    transition: transform 0.5s;
 }
 
 .container {
@@ -385,6 +405,21 @@ button {
         }
     }
 
+    .slider{
+        height: 51px;
+        &-track{
+            &__link{
+                font-size: 16px;
+                padding: 16px 27px;
+            }
+            &__img{
+                padding-top: 16px;
+                height: 19px;
+                width: 19px;
+            }
+        }
+    }
+
     .section {
         margin-top: 48px;
        &__star1, 
@@ -436,4 +471,13 @@ button {
         font-size: 16px;
     }
 }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.slider-infinite:hover .slider-track {
+  animation-play-state: paused;
 }
