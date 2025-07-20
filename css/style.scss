@@ -42,7 +42,7 @@ button {
         position: absolute;
         padding-top: 196px;
         &__titel {
-            width: 769px;
+            max-width: 769px;
             font-weight: 700;
             font-size: 64px;
             line-height: 78px;
@@ -50,7 +50,7 @@ button {
         }
         &__text {
             margin: 24px 0 48px;
-            width: 720px;
+            max-width: 720px;
             font-weight: 400;
             font-size: 24px;
             line-height: 32px;
@@ -110,6 +110,8 @@ button {
 .slider{
     background: #BCEC30;
     height: 90px;
+    overflow: hidden;
+    width: 100%;
     &-track{
         display: flex;
         width: max-content;
@@ -330,6 +332,66 @@ button {
         font-weight: 600;
         font-size: 24px;
         color: #000000;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .center {
+        padding-left: calc(50% - 400px);
+        padding-right: calc(50% - 400px);
+    }
+    .top {
+        &__star3 {
+            right: 310px;
+        }
+        &__star4 {
+            right: 200px;
+        }
+    }
+    .game-box__name {
+        padding: 18px 10px 18px;
+        &-text {
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+
+    .container-box__content {
+        padding: 27px 35px;
+        &-titel {
+            font-size: 32px;
+        }
+        &-text {
+            margin: 15px 0 20px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &-button {
+            height: 49px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .center {
+        padding-left: calc(50% - 370px);
+        padding-right: calc(50% - 370px);
+    }
+    .top {
+       &-content {
+            &__titel {
+                font-size: 52px;
+                width: 640px; 
+            }
+            &__text {
+                width: 640px;
+            }
+       }
+    }
+
+    .container-box__content {
+        padding: 20px 35px;
     }
 }
 
